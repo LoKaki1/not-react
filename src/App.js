@@ -1,8 +1,5 @@
 import React, {useState} from 'react';
-
-import Watchlist from './Components/OutputAndItsGarbage.js';
-import InputAndTheierGarbage from './Components/InputAndTheirGarbage.js';
-
+import ParametersInput from './Components/Parameters.js';
 
 export default function App() {
   
@@ -10,9 +7,7 @@ export default function App() {
   const [brendon, setBrendon] = useState([])
     return (
     <>
-      <Watchlist active={benny} setAll={setBrendon} all={brendon} />
-      <InputAndTheierGarbage active={setBenny}/>
-
+      <ParametersInput active={benny}  all={brendon} setAll={setBrendon} setActive={setBenny}/>
     </>
     )
   
