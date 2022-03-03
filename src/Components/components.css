@@ -1,0 +1,31 @@
+.searchbar {
+  height: 23px;
+  border: #000;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  
+}
+.bar {
+  height: 23px;
+  position: relative;
+  width: 180px;
+  bottom: 4px;
+  margin: auto;
+  padding: 10px;
+  box-shadow: 1px 1px 8px 1px #dfdddd;
+  border-radius: 30px;
+  
+  
+}
+.bar:hover {
+  box-shadow: 1px 1px 8px 1px #c5c5c5;
+}
+.bar:focus-within {
+  box-shadow: 1px 1px 8px 1px #c5c5c5;
+  outline: none;
+}
+.submit-button {
+    color: rgb(142, 238, 209);
+
+}
