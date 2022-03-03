@@ -4,7 +4,7 @@ import { DataGrid } from '@mui/x-data-grid';
 
 const contains_object = (oldList, benny, t) => {
     for(let i = 0; i < oldList.length; i++) {
-      if (oldList[i].ticker===benny.ticker && oldList[i].price===t) {
+      if (oldList[i].ticker==benny.ticker && oldList[i].price==t.price) {
         return true
       }
     }
@@ -17,6 +17,7 @@ const columns = [
   { field: 'lastPrice', headerName: 'Last Price', width: 150 },
 ];
 
+let counter = 0
 
 export default function Watchlist(props) {
     const predictStock = () => {
@@ -31,10 +32,13 @@ export default function Watchlist(props) {
                             'price': response.data.price,
                             'lastPrice': response.data.current_price
                           }
-            if (!contains_object(oldList, props.active, response.data)){
+            console.log(response.data)
+            if (!contains_object(oldList, props.active, newData)){
               newList.push(newData)
             }
-            console.log(newList)
+            else
+        console.log(`ticker already in local database ${newData.ticker}`)
+            console.log(newData)
             return  newList
           })  
         }, (error) => {
@@ -45,9 +49,9 @@ export default function Watchlist(props) {
 
     return (
         <>
-          <div>
-            <button onClick={() => predictStock()}>
-              Go!
+          <div >
+            <button class='submit'onClick={() => predictStock()}>
+              Predict 🚀   
             </button>
           </div>
           <div>

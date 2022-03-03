@@ -10,14 +10,16 @@
   height: 23px;
   position: relative;
   width: 180px;
-  bottom: 4px;
+  bottom: 60px;
   margin: auto;
   padding: 10px;
   box-shadow: 1px 1px 8px 1px #dfdddd;
-  border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
   
   
 }
+
 .bar:hover {
   box-shadow: 1px 1px 8px 1px #c5c5c5;
 }
@@ -28,4 +30,22 @@
 .submit-button {
     color: rgb(142, 238, 209);
 
+}
+
+.submit{
+  background-color: #36d9b6;
+  border-radius: 30px;
+  border:0;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.divs{
+  height: 50px;
+  position: relative;
+  width: 180px;
+  margin: auto;
+  float:left; 
+  padding: 10px;
 }

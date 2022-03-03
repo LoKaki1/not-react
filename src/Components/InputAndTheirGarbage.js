@@ -13,7 +13,6 @@ export default function InputAndTheierGarbage(props) {
     }
     return (
     <div>
-        
         <form className="bar">
             <input className='searchbar' type="text" onChange={(e) => handleChange(e, 'ticker')} placeholder='Enter ticker..' style={{}}/>
         </form>
