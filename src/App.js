@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ParametersInput from './Components/Parameters.js';
+import Watchlist from './Components/Watchlist.js';
 
 export default function App() {
   
@@ -8,6 +9,7 @@ export default function App() {
     return (
     <>
       <ParametersInput active={benny}  all={brendon} setAll={setBrendon} setActive={setBenny}/>
+      <Watchlist rowsProp={brendon}/>
     </>
     )
   
